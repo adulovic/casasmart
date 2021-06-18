@@ -1,0 +1,376 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	font-family: 'Dosis', sans-serif;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 175%;
+	word-spacing: 0.4em;
+	text-align: justify;
+	padding-top: 1%;
+	padding-bottom: 1%;	
+}
+a {
+	font-family: 'Dosis', sans-serif;
+	text-decoration: none;
+}
+
+/* Headings */
+
+h1 {
+	font-family: 'Dosis', sans-serif;
+	text-align:center;
+	color: #fff;
+	background-color: #036;
+	font-size:12px;
+}
+h2 {
+	font-family: 'Dosis', sans-serif;
+	text-align:center;
+	color: #fff;
+	background-color: #036;
+	opacity: .75;
+	width:100%;
+	margin: 0;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+h3 {
+	font-family: 'Dosis', sans-serif;
+	width:100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+.hr {
+	max-width:60%;
+	margin-top:5%;
+	margin-bottom:10%;
+}
+
+/* Parallax background images */
+
+.parallax {
+	max-height: 75%;
+	height: 75%;
+	background-size: 100% auto !important;
+	position: relative;
+}
+.parallax>* {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+#Services {
+	overflow:hidden;
+}
+#Consulting {
+	background: url("../img/parallax_consulting.jpg") no-repeat fixed center;
+}
+#Sales {
+	background: url('../img/parallax_amazon.jpg') no-repeat fixed center;
+}
+#Installations {
+	background: url('../img/parallax_installation.jpg') no-repeat fixed center;
+}
+#Maintenance {
+	background: url('../img/parallax_maintenance.jpg') no-repeat fixed center;
+}
+#Entertainment {
+	background: url('../img/parallax_entertainment.jpg') no-repeat fixed center;
+}
+#Cinema {
+	background: url('../img/parallax_cinema.jpg') no-repeat fixed center;
+}
+#Sound {
+	background: url('../img/parallax_sound.jpg') no-repeat fixed center;
+}
+#Voice {
+	background: url('../img/parallax_voice.jpg') no-repeat fixed center;
+}
+#Security {
+	background: url('../img/parallax_security.jpg') no-repeat fixed center;
+}
+#Lights {
+	background: url('../img/parallax_lighting.jpg') no-repeat fixed center;
+}
+#Cameras {
+	background: url('../img/parallax_cameras.jpg') no-repeat fixed center;
+}
+#Sensors {
+	background: url('../img/parallax_sensors.jpg') no-repeat fixed center;
+}
+#AccessControl {
+	background: url('../img/parallax_accesscontrol.jpg') no-repeat fixed center;
+}
+#Monitoring {
+	background: url('../img/parallax_monitoring.jpg') no-repeat fixed center;	
+}
+#Automation {
+	background: url('../img/parallax_automation.jpg') no-repeat fixed center;	
+}
+#Energy {
+	background: url('../img/parallax_energy.jpg') no-repeat fixed center;
+}
+#Remote {
+	background: url('../img/parallax_remote.jpg') no-repeat fixed center;
+}
+#Networking {
+	background: url('../img/parallax_network.jpg') no-repeat fixed center;
+}
+#NAS {
+	background: url('../img/parallax_NAS.jpg') no-repeat fixed center;
+}
+#CompanyHistory {
+	background: url('../img/parallax_history.jpg') no-repeat fixed center;
+}
+#Jobs {
+	background: url('../img/parallax_jobs.jpg') no-repeat fixed center;
+}
+#Showcase {
+	background: url('../img/parallax_showcase.jpg') no-repeat fixed center;
+}
+#Dollhouse {
+	background: url('../img/dollhouse.jpg') no-repeat fixed center;
+}
+#Partners {
+	background: url('../img/parallax_partners.jpg') no-repeat fixed center;
+}
+#Contact {
+	background: url('../img/parallax_contact.jpg') no-repeat fixed center;
+}
+
+/* Smaller versions of bg images for small screen devices */
+
+@media only screen 
+and (min-width: 320px)
+and (max-width: 860px){
+ 
+	#Consulting {
+		background: url("../img/parallax_consulting.small.jpg") no-repeat center;
+	}
+	#Sales {
+		background: url('../img/parallax_amazon.small.jpg') no-repeat center;
+	}
+	#Installations {
+		background: url('../img/parallax_installation.small.jpg') no-repeat center;
+	}
+	#Maintenance {
+		background: url('../img/parallax_maintenance.small.jpg') no-repeat center;
+	}
+	#Entertainment {
+		background: url('../img/parallax_entertainment.small.jpg') no-repeat center;
+	}
+	#Cinema {
+		background: url('../img/parallax_cinema.small.jpg') no-repeat center;
+	}
+	#Sound {
+		background: url('../img/parallax_sound.small.jpg') no-repeat center;
+	}
+	#Voice {
+		background: url('../img/parallax_voice.small.jpg') no-repeat center;
+	}
+	#Security {
+		background: url('../img/parallax_security.small.jpg') no-repeat center;
+	}
+	#Lights {
+		background: url('../img/parallax_lighting.small.jpg') no-repeat center;
+	}
+	#Cameras {
+		background: url('../img/parallax_cameras.small.jpg') no-repeat center;
+	}
+	#Sensors {
+		background: url('../img/parallax_sensors.small.jpg') no-repeat center;
+	}
+	#AccessControl {
+		background: url('../img/parallax_accesscontrol.small.jpg') no-repeat center;
+	}
+	#Monitoring {
+		background: url('../img/parallax_monitoring.small.jpg') no-repeat center;	
+	}
+	#Automation {
+		background: url('../img/parallax_automation.small.jpg') no-repeat center;	
+	}
+	#Energy {
+		background: url('../img/parallax_energy.small.jpg') no-repeat center;
+	}
+	#Remote {
+		background: url('../img/parallax_remote.small.jpg') no-repeat center;
+	}
+	#Networking {
+		background: url('../img/parallax_network.small.jpg') no-repeat center;
+	}
+	#NAS {
+		background: url('../img/parallax_NAS.small.jpg') no-repeat center;
+	}
+	#CompanyHistory {
+		background: url('../img/parallax_history.small.jpg') no-repeat center;
+	}
+	#Jobs {
+		background: url('../img/parallax_jobs.small.jpg') no-repeat center;
+	}
+	#Showcase {
+		background: url('../img/parallax_showcase.small.jpg') no-repeat center;
+	}
+	#Dollhouse {
+		background: url('../img/dollhouse.small.jpg') no-repeat center;
+	}
+	#Partners {
+		background: url('../img/parallax_partners.small.jpg') no-repeat center;
+	}
+	#Contact {
+		background: url('../img/parallax_contact.small.jpg') no-repeat center;
+	}
+}
+
+/* Copyright */
+
+.copyright_text {
+	text-align: center;
+	color: #636363;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	letter-spacing: 0;
+}
+
+/* Header and Footer */
+
+header {
+	background-size: cover;
+	background-position: 50% -100px;
+}
+footer {
+	background-color: #f1f1f1;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top:50px;
+}
+footer > div {
+	text-align:center;
+}
+
+/* Navbar */
+
+.navbar-collapse {
+	background-color: #f8f8f8;
+}
+.navbar-default {
+	padding:0 10%;
+	max-height:52px;
+}
+.navbar-brand {
+	padding:1px;
+}
+.navbar-brand img {
+	height:100%;
+	max-height:50px;
+}
+.navbar-language {
+	max-height:20px;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #777;
+	text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover{
+	color: #09f;
+}
+.dropdown .dropdown-menu .dropdown-item {
+	display:block;
+	padding:5%;
+	border-top: 1px solid #ddd;
+	font-size: 16px;
+}
+.navbar-nav > li > .dropdown-menu {
+    padding-top: 0;
+}
+
+/* Buttons */
+
+.amazon_button ,
+.smarthome_button {
+	max-height:50px;
+	float:left;
+	padding-right:20px;
+}
+.fa {
+	padding:2%;
+}
+.partners {
+	width:80%
+}
+.amazon_links > iframe {
+	width:120px;
+	height:240px;
+	margin:1%;
+	border:none;
+	overflow:hidden;
+}
+
+/* Contact Us */
+
+.social_networks {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	margin-top: 20px;
+}
+.social_networks li {
+	display: inline;
+	padding-right:10px;
+}
+.social_networks li a {
+	display: inline-block;
+    font-size: 20px;
+	line-height: 28px;
+}
+.social_networks li a:hover {
+	color: #036;
+	border-color:#036; 
+}
+.qr {
+	max-width:200px;
+	max-height:200px;
+}
+#map {
+	position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+#map > iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+	border:none;
+}
+
+/* Dollhouse */
+#InfoDiv {
+	position: fixed; /* Sit on top of the page content */
+	display: none; /* Hidden by default */
+	width: 60%;
+	min-height: 60%;
+	height: auto;
+	top: 20%;
+	left: 20%;
+	right: 20%;
+	background-color: #fff; /* Fallback background-color */
+	background-color: rgba(255,255,255, 0.9); /* White background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+	border: 2px solid #036;
+}
