@@ -1,0 +1,75 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^http://casasmart.do/.*$    	[NC]
+RewriteCond %{HTTP_REFERER} !^http://casasmart.do$      	[NC]
+RewriteCond %{HTTP_REFERER} !^http://www.casasmart.do/.*$   [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.casasmart.do$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://casasmart.do/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://casasmart.do$      	[NC]
+RewriteCond %{HTTP_REFERER} !^https://www.casasmart.do/.*$  [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.casasmart.do$     [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
+# redirect http://www.casasmart.do to http://casasmart.do
+RewriteCond %{HTTP_HOST} ^www\.casasmart\.do$
+RewriteRule ^/?$ "http\:\/\/casasmart\.do\/" [R=301,L]
+
+# redirect http to https
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://casasmart.do/$1 [R,L]
+
+# caching videos, images, script and css
+<IfModule mod_expires.c>
+    ExpiresActive on
+	ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType text/css "access plus 1 month"
+	ExpiresByType text/html "access plus 600 seconds"
+</IfModule>
+
+# more caching
+<ifModule mod_headers.c> 
+    # One year for image and video files
+    <filesMatch ".(flv|gif|ico|jpg|jpeg|mp4|mpeg|png|svg|swf|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </filesMatch>
+    # One month for CSS, JavaScript and PDF files
+    <filesMatch ".(css|js|pdf)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </filesMatch>
+</ifModule>
+
+# add charset in header
+AddDefaultCharset UTF-8
+
+<IfModule mod_headers.c>
+	Header always set X-Frame-Options DENY
+	Header always set X-Content-Type-Options: nosniff
+	Header always set Content-Security-Policy "upgrade-insecure-requests;"
+    Header always set Content-Security-Policy "default-src 'none' ; \
+		report-uri https://casasmart.do ; \
+		base-uri 'self' ; \
+		frame-ancestors 'self' ; \
+		upgrade-insecure-requests; \
+		script-src 'self' 'unsafe-inline' \
+			https://code.jquery.com  https://www.googletagmanager.com  https://maxcdn.bootstrapcdn.com  https://www.google-analytics.com  ; \
+		style-src 'self' 'unsafe-inline' \
+			https://fonts.googleapis.com  https://maxcdn.bootstrapcdn.com  ; \
+		object-src 'none' ; \
+		worker-src 'none' ; \
+		child-src 'none' ; \
+		frame-src 'self'  https://www.google.com  https://ws-na.amazon-adsystem.com ; \
+		font-src 'self'  https://fonts.gstatic.com  https://maxcdn.bootstrapcdn.com ; \
+		img-src 'self'  https://www.google-analytics.com ; \
+		media-src 'self'; \
+		connect-src 'self' https://www.google-analytics.com ; \
+		form-action 'self' ;"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
